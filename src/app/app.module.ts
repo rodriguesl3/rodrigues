@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import {MatButtonModule, MatCheckboxModule, MatCardModule} from '@angular/material';
+import {MatButtonModule, MatCheckboxModule, MatCardModule, MatIconModule} from '@angular/material';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -20,9 +20,10 @@ import { HistoryComponent } from './history/history.component';
     AppRoutingModule,
     MatButtonModule,
     MatCheckboxModule,
-    MatCardModule
+    MatCardModule,
+    MatIconModule
   ],
-  providers: [],
+  providers: [MainServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
