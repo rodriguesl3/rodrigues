@@ -1,0 +1,43 @@
+.row{
+    display: flex;
+    flex-flow: row wrap;
+    height: 100vh;
+}
+
+.side-intro{
+    flex-flow: column nowrap;
+    align-content: center;
+    background:darkgoldenrod;
+    min-width: 30%;
+    display: flex;
+    align-items: center;
+   padding-top: 30px;
+}
+
+.header-image {
+    background-image: url('https://avatars0.githubusercontent.com/u/19299997?s=400&u=531ee147802d11e93f44d2652abcf596e2c6ad66&v=4');
+    background-size: cover;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border-radius:50%;
+    
+  }
+
+
+
+.back-intro{   
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-image: url("../../assets/images/new_york_view-wallpaper-1600x900.jpg");
+}
+.filter{
+    background: rgba(0,0,0,0.3);
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+}
+
+
