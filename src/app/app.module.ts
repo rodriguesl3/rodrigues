@@ -1,8 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import {MatButtonModule, MatCheckboxModule, MatCardModule, MatIconModule} from '@angular/material';
+import {MatButtonModule, MatCheckboxModule,
+  MatCardModule, MatIconModule,
+  MatProgressBarModule,
+  MatExpansionModule} from '@angular/material';
 
+  import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,11 +25,14 @@ import { IntroductionComponent } from './introduction/introduction.component';
 
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     MatButtonModule,
     MatCheckboxModule,
     MatCardModule,
-    MatIconModule
+    MatIconModule,
+    MatProgressBarModule,
+    MatExpansionModule
   ],
   providers: [MainServiceService],
   bootstrap: [AppComponent]
