@@ -11,6 +11,14 @@ export class IntroductionComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
+
+  openLinkedIn(): void {
+     window.open('https://www.linkedin.com/in/lucasrodriguess/');
+  }
+
+
+
 
 }

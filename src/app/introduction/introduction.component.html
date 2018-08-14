@@ -1,277 +1,37 @@
 <div class="row">
-
+    
   <div class="side-intro">
     <div class="header-image"></div>
     <section class="mat-typography">
       <h1>Lucas Fernandes Rodrigues</h1>
       <h3>Tech leader - Senior Developer</h3>
-      <i class="fas fa-envelope fa-2x"></i>
-      <h4> lfrodrigues@programmer.net</h4>
-      <i class="fab fa-linkedin fa-2x"></i>
-      <h4>https://www.linkedin.com/in/lucasrodriguess/</h4>
-      <i class="fab fa-skype fa-2x"></i>
-      <h4>@lusk.rs</h4>
+
+      <div class="contact-side-intro">
+        <button mat-fab color="primary">
+          <i class="fas fa-envelope fa-2x"></i>
+        </button>
+        <!-- <h4> lfrodrigues@programmer.net</h4> -->
+        <button mat-fab color="primary" (click)="openLinkedIn()">
+          <i class="fab fa-linkedin fa-2x"></i>
+        </button>
+
+        
+    
+        <!-- <h4>https://www.linkedin.com/in/lucasrodriguess/</h4> -->
+
+        <!-- <span class="skype-button bubble " data-contact-id="@lusk.rs" data-text="Contact me "></span>
+        <script src="https://swc.cdn.skype.com/sdk/v1/sdk.min.js"></script> -->
+        <!-- <button mat-fab color="primary">
+              <i class="fab fa-skype fa-2x"></i>
+            </button> -->
+        <!-- <h4>@lusk.rs</h4> -->
+      </div>
+
     </section>
   </div>
   <div class="content-intro">
     <!-- <div class="filter"></div> -->
     <div class="back-intro">
-      <div class="info-graph">
-          <mat-accordion style="width: 70%">
-              <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                  <mat-panel-title>
-                    Development Skills
-                  </mat-panel-title>
-                  <mat-panel-description>
-                    Productivity Tools
-                  </mat-panel-description>
-                </mat-expansion-panel-header>
-    
-                <div class="skills">
-                  <ul class="lines">
-                    <li class="line l--0">
-                      <span class="line__label title">
-                        Risk level:
-                      </span>
-                    </li>
-                    <li class="line l--25">
-                      <span class="line__label">
-                        1
-                      </span>
-                    </li>
-                    <li class="line l--50">
-                      <span class="line__label">
-                        2
-                      </span>
-                    </li>
-                    <li class="line l--75">
-                      <span class="line__label">
-                        3
-                      </span>
-                    </li>
-                    <li class="line l--100">
-                      <span class="line__label">
-                        4
-                      </span>
-                    </li>
-                  </ul>
-    
-    
-                  <div class="charts">
-                    <div class="chart chart--dev">
-                      <span class="chart__title">High Risk Indicators
-                      </span>
-                      <ul class="chart--horiz">
-                        <li class="chart__bar" style="width: 98%;">
-                          <span class="chart__label">
-                            History of family violence
-                          </span>
-                        </li>
-                        <li class="chart__bar" style="width: 98%;">
-                          <span class="chart__label">
-                            Imminence
-                          </span>
-                        </li>
-                        <li class="chart__bar" style="width: 70%;">
-                          <span class="chart__label">
-                            Risk of harm to child
-                          </span>
-                        </li>
-                        <li class="chart__bar" style="width: 40%;">
-                          <span class="chart__label">
-                            Shame
-                          </span>
-                        </li>
-                        <li class="chart__bar" style="width: 40%;">
-                          <span class="chart__label">
-                            Reprisals
-                          </span>
-                        </li>
-                        <li class="chart__bar" style="width: 60%;">
-                          <span class="chart__label">
-                            Threats
-                          </span>
-                        </li>
-                        <li class="chart__bar" style="width: 55%;">
-                          <span class="chart__label">
-                            Emotional abuse
-                          </span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <!-- <mat-form-field>
-                      <input matInput placeholder="First name">
-                    </mat-form-field>
-                
-                    <mat-form-field>
-                      <input matInput placeholder="Age">
-                    </mat-form-field> -->
-              </mat-expansion-panel>
-              <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-                <mat-expansion-panel-header>
-                  <mat-panel-title>
-                    Self aware panel
-                  </mat-panel-title>
-                  <mat-panel-description>
-                    Currently I am {{panelOpenState ? 'open' : 'closed'}}
-                  </mat-panel-description>
-                </mat-expansion-panel-header>
-                <!-- <p>I'm visible because I am open</p> -->
-                <div class="skills">
-                  <ul class="lines">
-                    <li class="line l--0">
-                      <span class="line__label title">
-                        Risk level:
-                      </span>
-                    </li>
-                    <li class="line l--25">
-                      <span class="line__label">
-                        1
-                      </span>
-                    </li>
-                    <li class="line l--50">
-                      <span class="line__label">
-                        2
-                      </span>
-                    </li>
-                    <li class="line l--75">
-                      <span class="line__label">
-                        3
-                      </span>
-                    </li>
-                    <li class="line l--100">
-                      <span class="line__label">
-                        4
-                      </span>
-                    </li>
-                  </ul>
-                  <div class="charts">
-                    <div class="chart chart--prod">
-                      <span class="chart__title">Other Risk Indicators
-                      </span>
-                      <ul class="chart--horiz">
-                        <li class="chart__bar" style="width: 75%;">
-                          <span class="chart__label">
-                            Risk Indicator 9
-    
-                          </span>
-                        </li>
-                        <li class="chart__bar" style="width: 80%;">
-                          <span class="chart__label">
-                            Risk Indicator 10
-    
-                          </span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </mat-expansion-panel>
-            </mat-accordion>
-      
-
-        <!-- Skill Sections -->
-        <div class="skills">
-          <ul class="lines">
-            <li class="line l--0">
-              <span class="line__label title">
-                Risk level:
-              </span>
-            </li>
-            <li class="line l--25">
-              <span class="line__label">
-                1
-              </span>
-            </li>
-            <li class="line l--50">
-              <span class="line__label">
-                2
-              </span>
-            </li>
-            <li class="line l--75">
-              <span class="line__label">
-                3
-              </span>
-            </li>
-            <li class="line l--100">
-              <span class="line__label">
-                4
-              </span>
-            </li>
-          </ul>
-
-          <!-- <div class="charts">
-            <div class="chart chart--dev">
-              <span class="chart__title">High Risk Indicators
-              </span>
-              <ul class="chart--horiz">
-                <li class="chart__bar" style="width: 98%;">
-                  <span class="chart__label">
-                    History of family violence
-                  </span>
-                </li>
-                <li class="chart__bar" style="width: 98%;">
-                  <span class="chart__label">
-                    Imminence
-                  </span>
-                </li>
-                <li class="chart__bar" style="width: 70%;">
-                  <span class="chart__label">
-                    Risk of harm to child
-                  </span>
-                </li>
-                <li class="chart__bar" style="width: 40%;">
-                  <span class="chart__label">
-                    Shame
-                  </span>
-                </li>
-                <li class="chart__bar" style="width: 40%;">
-                  <span class="chart__label">
-                    Reprisals
-                  </span>
-                </li>
-                <li class="chart__bar" style="width: 60%;">
-                  <span class="chart__label">
-                    Threats
-                  </span>
-                </li>
-                <li class="chart__bar" style="width: 55%;">
-                  <span class="chart__label">
-                    Emotional abuse
-                  </span>
-                </li>
-              </ul>
-            </div>
-            </div> -->
-          <!-- <div class="charts">
-            <div class="chart chart--prod">
-              <span class="chart__title">Other Risk Indicators
-              </span>
-              <ul class="chart--horiz">
-                <li class="chart__bar" style="width: 75%;">
-                  <span class="chart__label">
-                    Risk Indicator 9
-
-                  </span>
-                </li>
-                <li class="chart__bar" style="width: 80%;">
-                  <span class="chart__label">
-                    Risk Indicator 10
-
-                  </span>
-                </li>
-              </ul>
-            </div> -->
-
-
-          <!-- </div> -->
-          <!-- </div> -->
-
-
-        </div>
-      </div>
     </div>
   </div>
+</div>
