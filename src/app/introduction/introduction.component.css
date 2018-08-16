@@ -69,11 +69,24 @@
 .info-items{
     width: 70%;
 }
-.mat-expansion-panel{
-    background: rgba(0,0,0,0.3);
+
+.mobile{
+    transition: 0.5s;
+}
+.mobile:hover{
+    width: 150px;
+    border-radius: 10%;
+    font-weight: bolder;
 }
 
 
+.mobile:hover::after{
+    content: '(41) 1234-1234'
+}
+
+.mobile:hover i{
+    display: none;
+}
 
 
 
