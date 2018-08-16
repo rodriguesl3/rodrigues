@@ -7,12 +7,11 @@
 
 .side-intro{
     flex-flow: column wrap;
-    align-content: center;
     background: rgba(0,0,0,0.2);
-    min-width: 40%;
+    max-width: 40%;
     display: flex;
-    align-items: center;
-   padding-top: 30px;
+    justify-content: center;
+    padding: 30px;
 }
 
 .contact-side-intro{
@@ -22,33 +21,25 @@
     justify-content: center;
 }
 
+.mat-fab{
+    margin-left: 5%;
+    margin-right: 5%;
+}
 
 .side-intro h1{margin-bottom: 0px}
 
-/* .header-image {
-    background-image: url('https://avatars0.githubusercontent.com/u/19299997?s=400&u=531ee147802d11e93f44d2652abcf596e2c6ad66&v=4');
-    background-size: cover;
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-    border-radius:50%;
-  } */
-
-  /* .mat-typography i{
-      margin-top:20px;
-  } */
   .mat-typography h1{
       font-size: 40px;
+      margin-bottom: 20px;
   }
+
+  .mat-typography h2{
+    flex-wrap: wrap;
+}
 
   .mat-progress-bar .mat-progress-bar-fill{
       transition: 0.5s !important;
   }
-
-  .mat-progress-bar{
-    height:40px;
-   
-}
 
 .back-intro{   
     position: absolute;

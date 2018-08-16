@@ -18,7 +18,7 @@ export class IntroductionComponent implements OnInit {
      window.open('https://www.linkedin.com/in/lucasrodriguess/');
   }
 
-
-
-
+  openGitHub(): void{
+    window.open('https://github.com/rodriguesl3');
+  }
 }
