@@ -1,12 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import {MatButtonModule, MatCheckboxModule,
+import {
+  MatButtonModule, MatCheckboxModule,
   MatCardModule, MatIconModule,
   MatProgressBarModule,
-  MatExpansionModule} from '@angular/material';
+  MatExpansionModule
+} from '@angular/material';
 
-  import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { CountUpModule } from 'countup.js-angular2';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -32,7 +36,8 @@ import { IntroductionComponent } from './introduction/introduction.component';
     MatCardModule,
     MatIconModule,
     MatProgressBarModule,
-    MatExpansionModule
+    MatExpansionModule,
+    CountUpModule
   ],
   providers: [MainServiceService],
   bootstrap: [AppComponent]
