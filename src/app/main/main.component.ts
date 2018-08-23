@@ -10,8 +10,9 @@ import { Chart } from 'chart.js';
 })
 export class MainComponent implements OnInit {
     chart = [];
-    pickANumber = 0;
-    monthsOfExperience = 0;
+    mugCoffe = 0;
+    projects = 0;
+    frameworks = 0;
     constructor() { }
     @HostListener('window:scroll', []) onWindowScroll() {
         // do some stuff here when the window is scrolled
@@ -21,8 +22,9 @@ export class MainComponent implements OnInit {
             || document.body.scrollTop || 0;
 
         if (verticalOffset > 300) {
-            this.pickANumber = 4546;
-            this.monthsOfExperience = 12 * 7;
+            this.mugCoffe = 2 * ((22 * 12) * 5);
+            this.projects = 12 * 7;
+            this.projects = 25;
         }
     }
 
