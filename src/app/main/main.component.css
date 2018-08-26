@@ -25,6 +25,11 @@
   max-width: 20%;
 }
 
+.cardTop{
+  justify-content: flex-start !important;
+}
+
+
 
 /*Biography*/
 
@@ -56,7 +61,7 @@
   padding-left: 30px;
   padding-right: 30px;
   width: 40%;
-  height: 100vh;
+  height: 60vh;
 }
 
 .content-bio {
@@ -65,6 +70,16 @@
   flex-flow: column;
   justify-content: center;
   align-items: center;
+}
+
+.mat-stepper-vertical-line::before {
+  content: '';
+  position: absolute;
+  top: -25px;
+  bottom: 10px;
+  left: 0;
+  border-left-width: 1px;
+  border-left-style: solid;
 }
 
 

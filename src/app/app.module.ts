@@ -1,11 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import {
   MatButtonModule, MatCheckboxModule,
   MatCardModule, MatIconModule,
   MatProgressBarModule,
-  MatExpansionModule
+  MatExpansionModule,
+  MatStepperModule
 } from '@angular/material';
 
 import { CountUpModule } from 'countup.js-angular2';
@@ -19,6 +21,7 @@ import { HistoryComponent } from './history/history.component';
 import { MainServiceService } from './main/service/main-service.service';
 import { IntroductionComponent } from './introduction/introduction.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,12 +34,14 @@ import { IntroductionComponent } from './introduction/introduction.component';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    HttpClientModule,
     MatButtonModule,
     MatCheckboxModule,
     MatCardModule,
     MatIconModule,
     MatProgressBarModule,
     MatExpansionModule,
+    MatStepperModule,
     CountUpModule
   ],
   providers: [MainServiceService],

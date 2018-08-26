@@ -1,41 +1,66 @@
 <div class="row">
-  <mat-card class="card mini-card">
+  <mat-card class="card mini-card cardTop">
+    <i class="fas fa-trophy fa-5x"></i>
     <mat-card-header>
       <mat-card-title>
-        Projects Finished
+        <h2>
+          Projects Finished
+        </h2>
       </mat-card-title>
     </mat-card-header>
     <div class="time">
-      <h1 countUp [endVal]="projects" [reanimateOnClick]="true">0</h1>
+      <h1 countUp [endVal]="projects">0</h1>
     </div>
   </mat-card>
 
   <mat-card class="card mini-card">
+      <i class="fas fa-globe fa-5x"></i>
     <mat-card-header>
       <mat-card-title>
-        mug of cafe
+        <h2>
+          Experience Areas
+        </h2>
+      </mat-card-title>
+    </mat-card-header>
+    <div class="experience-areas">
+      <ul *ngFor='let experience of experiencesList'>
+        <li> {{experience.experience}} </li>
+      </ul>
+      <!-- <mat-vertical-stepper>
+        <mat-step *ngFor='let experience of experiencesList'>
+          <ng-template matStepLabel>{{experience}}</ng-template>
+        </mat-step>
+      </mat-vertical-stepper> -->
+
+    </div>
+  </mat-card>
+
+  <mat-card class="card mini-card cardTop">
+    <i class="fas fa-graduation-cap fa-5x"></i>
+    <mat-card-header>
+      <mat-card-title>
+        <h3>
+          Languages and Frameworks
+        </h3>
+      </mat-card-title>
+    </mat-card-header>
+  </mat-card>
+
+
+  <mat-card class="card mini-card cardTop">
+    <i class="fas fa-coffee fa-5x"></i>
+    <mat-card-header>
+      <mat-card-title>
+        <h2>
+          mug of cafe
+        </h2>
       </mat-card-title>
     </mat-card-header>
     <div class="numbers">
-      <h1 countUp [endVal]="mugCoffe" [reanimateOnClick]="true">0</h1>
+      <h1 countUp [endVal]="mugCoffe">0</h1>
     </div>
   </mat-card>
 
-  <mat-card class="card mini-card">
-    <mat-card-header>
-      <mat-card-title>
-
-      </mat-card-title>
-    </mat-card-header>
-  </mat-card>
-
-  <mat-card class="card mini-card">
-    <mat-card-header>
-      <mat-card-title>
-        Languages and Frameworks
-      </mat-card-title>
-    </mat-card-header>
-  </mat-card>
 </div>
 
 

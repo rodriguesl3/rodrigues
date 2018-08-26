@@ -1,5 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { Chart } from 'chart.js';
+import { MainServiceService } from './service/main-service.service';
 
 
 
@@ -10,10 +11,12 @@ import { Chart } from 'chart.js';
 })
 export class MainComponent implements OnInit {
     chart = [];
+    experiencesList = [];
     mugCoffe = 0;
     projects = 0;
     frameworks = 0;
-    constructor() { }
+    frameWorksExperience = [];
+    constructor(private _mainService: MainServiceService) { }
     @HostListener('window:scroll', []) onWindowScroll() {
         // do some stuff here when the window is scrolled
 
@@ -21,7 +24,7 @@ export class MainComponent implements OnInit {
             || document.documentElement.scrollTop
             || document.body.scrollTop || 0;
 
-        if (verticalOffset > 300) {
+        if (verticalOffset === 300) {
             this.mugCoffe = 2 * ((22 * 12) * 5);
             this.projects = 12 * 7;
             this.projects = 25;
@@ -30,13 +33,14 @@ export class MainComponent implements OnInit {
 
 
     ngOnInit() {
+
         this.chart = new Chart('canvas', {
             type: 'bar',
             data: {
                 labels: ['.Net', 'SQL', 'Angular', 'JQuery', 'Archtecture', 'Automation'],
                 datasets: [{
                     label: 'Experience Value',
-                    data: [12, 19, 3, 5, 2, 3],
+                    data: [],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',
@@ -66,7 +70,15 @@ export class MainComponent implements OnInit {
                 }
             }
         });
+        this._mainService.getFrameworksExperience().subscribe(response => {
+            this.chart.data.datasets[0].data = response;
+            this.chart.update();
+        });
 
+
+        this._mainService.getExperiences().subscribe(products => {
+            this.experiencesList = products;
+        });
     }
 
 }
