@@ -24,7 +24,7 @@ export class MainComponent implements OnInit {
             || document.documentElement.scrollTop
             || document.body.scrollTop || 0;
 
-        if (verticalOffset === 300) {
+        if (verticalOffset >= 300) {
             this.mugCoffe = 2 * ((22 * 12) * 5);
             this.projects = 12 * 7;
             this.projects = 25;

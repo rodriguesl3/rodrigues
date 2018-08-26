@@ -13,38 +13,52 @@
     </div>
   </mat-card>
 
-  <mat-card class="card mini-card">
-      <i class="fas fa-globe fa-5x"></i>
-    <mat-card-header>
-      <mat-card-title>
-        <h2>
-          Experience Areas
-        </h2>
-      </mat-card-title>
-    </mat-card-header>
-    <div class="experience-areas">
-      <ul *ngFor='let experience of experiencesList'>
-        <li> {{experience.experience}} </li>
-      </ul>
-      <!-- <mat-vertical-stepper>
-        <mat-step *ngFor='let experience of experiencesList'>
-          <ng-template matStepLabel>{{experience}}</ng-template>
-        </mat-step>
-      </mat-vertical-stepper> -->
+  <div class="card mini-card flip-container">
+    <mat-card class=" flipper" ontouchstart="this.classList.toggle('hover');">
+      <div class="front">
+        <!-- front content -->
+        <i class="fas fa-globe fa-5x"></i>
+        <mat-card-header>
+          <mat-card-title>
+            <h2>
+              Experience Areas
+            </h2>
+          </mat-card-title>
+        </mat-card-header>
+      </div>
+      <div class="back">
+        <!-- back content -->
+        <ul>
+          <li *ngFor='let experience of experiencesList'>{{experience.experience}}</li>
+        </ul>
+        <!-- <mat-vertical-stepper style="margin-right: 70%;">
+            <mat-step *ngFor='let experience of experiencesList'>
+              <ng-template matStepLabel MatStepperIconContext="active">{{experience.experience}}</ng-template>
+            </mat-step>
+          </mat-vertical-stepper> -->
+      </div>
+    </mat-card>
+  </div>
 
-    </div>
-  </mat-card>
-
-  <mat-card class="card mini-card cardTop">
-    <i class="fas fa-graduation-cap fa-5x"></i>
-    <mat-card-header>
-      <mat-card-title>
-        <h3>
-          Languages and Frameworks
-        </h3>
-      </mat-card-title>
-    </mat-card-header>
-  </mat-card>
+ <div class="card mini-card flip-container">
+    <mat-card class="flipper" ontouchstart="this.classList.toggle('hover');">
+        <div class="front">
+            <i class="fas fa-graduation-cap fa-5x"></i>
+            <mat-card-header>
+              <mat-card-title>
+                <h3>
+                  Languages and Frameworks
+                </h3>
+              </mat-card-title>
+            </mat-card-header>
+        </div>
+        <div class="back">
+    
+        </div>
+        
+      </mat-card>
+ </div>
+  
 
 
   <mat-card class="card mini-card cardTop">
