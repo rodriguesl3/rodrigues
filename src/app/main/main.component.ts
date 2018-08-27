@@ -70,14 +70,14 @@ export class MainComponent implements OnInit {
                 }
             }
         });
-        this._mainService.getFrameworksExperience().subscribe(response => {
-            this.chart.data.datasets[0].data = response;
-            this.chart.update();
-        });
+        // this._mainService.getFrameworksExperience().subscribe(response => {
+        //     this.chart.data.datasets[0].data = response;
+        //     this.chart.update();
+        // });
 
 
-        this._mainService.getExperiences().subscribe(products => {
-            this.experiencesList = products;
+        this._mainService.getExperiences().subscribe(exp => {
+            this.experiencesList = exp;
         });
     }
 

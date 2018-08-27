@@ -28,9 +28,14 @@
       </div>
       <div class="back">
         <!-- back content -->
-        <ul>
-          <li *ngFor='let experience of experiencesList'>{{experience.experience}}</li>
-        </ul>
+        
+        
+        <button mat-stroked-button
+        *ngFor='let experience of experiencesList.areaExperience'>
+        <i [ngClass]="experience.icon"></i>
+          {{experience.experience}}
+        </button>
+
         <!-- <mat-vertical-stepper style="margin-right: 70%;">
             <mat-step *ngFor='let experience of experiencesList'>
               <ng-template matStepLabel MatStepperIconContext="active">{{experience.experience}}</ng-template>
@@ -40,25 +45,29 @@
     </mat-card>
   </div>
 
- <div class="card mini-card flip-container">
+  <div class="card mini-card flip-container">
     <mat-card class="flipper" ontouchstart="this.classList.toggle('hover');">
-        <div class="front">
-            <i class="fas fa-graduation-cap fa-5x"></i>
-            <mat-card-header>
-              <mat-card-title>
-                <h3>
-                  Languages and Frameworks
-                </h3>
-              </mat-card-title>
-            </mat-card-header>
-        </div>
-        <div class="back">
-    
-        </div>
-        
-      </mat-card>
- </div>
-  
+      <div class="front">
+        <i class="fas fa-graduation-cap fa-5x"></i>
+        <mat-card-header>
+          <mat-card-title>
+            <h3>
+              Languages and Frameworks
+            </h3>
+          </mat-card-title>
+        </mat-card-header>
+      </div>
+      <div class="back">
+          <button mat-stroked-button 
+          *ngFor='let experience of experiencesList.frameworks'>
+          <i [ngClass]="experience.icon"></i>
+            {{experience.experience}}
+          </button>
+      </div>
+
+    </mat-card>
+  </div>
+
 
 
   <mat-card class="card mini-card cardTop">
