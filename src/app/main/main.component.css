@@ -28,6 +28,11 @@
   max-width: 20%;
 }
 
+.half-card{
+  width: 50%;
+  height: 400px;
+}
+
 .cardTop{
   justify-content: flex-start !important;
 }
